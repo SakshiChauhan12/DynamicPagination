@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(45deg,#ededed,#d33675);
+
+
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding:10px 40px;
+    border-radius:6px;
+}
+ul li{
+    display:inline-block;
+    margin: 0 10px;
+   
+    width: 45px;
+    height: 45px;
+    border-radius:50% ;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer;
+    background-position: 0 -45px;
+    transition: background-position 0.5s;
+}
+ul li.active{
+    color: #fff;
+    background-image: linear-gradient(#ff4568,#ff4568);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.btn1,.btn2{
+    display: inline-flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border:none;
+    cursor: pointer;
+
+}
+.btn1 img{
+    width:24px;
+    margin-right: 15px;
+
+}
+.btn2 img{
+    width:24px;
+    margin-left: 15px;
+    transform: rotate(180deg);
+
+}
+
+
+
+@media (max-width: 768px) {
+    .pagination {
+        padding: 10px 20px;
+    }
+
+    ul li {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .btn1, .btn2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        padding: 10px;
+        flex-direction: column; /* Stack buttons and pagination vertically */
+    }
+
+    .btn1, .btn2 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul li {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
